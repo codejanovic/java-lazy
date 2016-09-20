@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
 
     <name>java-lazy</name>
-    <description>guice extension to automatically install annotated modules</description>
+    <description></description>
     <url>https://github.com/codejanovic/java-lazy</url>
     <developers>
         <developer>
