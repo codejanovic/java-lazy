@@ -2,22 +2,21 @@ package io.github.codejanovic.java.lazy;
 
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.function.Supplier;
 
 
 public interface Lazy<T> {
     T value();
 
     final class Smart<T> implements Lazy<T> {
-        private final Supplier<T> supplier;
+        private final Lazy<T> lazy;
 
-        public Smart(final Supplier<T> supplier) {
-            this.supplier = supplier;
+        public Smart(final Lazy<T> lazy) {
+            this.lazy = lazy;
         }
 
         @Override
         public T value() {
-            return supplier.get();
+            return lazy.value();
         }
     }
 
