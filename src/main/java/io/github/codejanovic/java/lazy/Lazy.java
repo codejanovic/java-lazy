@@ -7,10 +7,10 @@ import java.util.concurrent.ArrayBlockingQueue;
 public interface Lazy<T> {
     T value();
 
-    final class Smart<T> implements Lazy<T> {
+    final class Value<T> implements Lazy<T> {
         private final Lazy<T> lazy;
 
-        public Smart(final Lazy<T> lazy) {
+        public Value(final Lazy<T> lazy) {
             this.lazy = lazy;
         }
 

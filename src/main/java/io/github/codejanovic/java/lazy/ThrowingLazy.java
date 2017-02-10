@@ -6,10 +6,10 @@ import java.util.concurrent.ArrayBlockingQueue;
 public interface ThrowingLazy<T> {
     T value() throws Exception;
 
-    final class Smart<T> implements ThrowingLazy<T> {
+    final class Value<T> implements ThrowingLazy<T> {
         private final ThrowingLazy<T> lazy;
 
-        public Smart(final ThrowingLazy<T> supplier) {
+        public Value(final ThrowingLazy<T> supplier) {
             this.lazy = supplier;
         }
 

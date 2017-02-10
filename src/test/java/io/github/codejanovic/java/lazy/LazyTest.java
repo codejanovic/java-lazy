@@ -11,7 +11,7 @@ public class LazyTest {
     @Test
     public void testSmartLazy() throws Exception {
         final List<String> list = new ArrayList<>();
-        final Lazy<String> lazy = new Lazy.Smart<>(() -> { list.add("1"); return "1"; });
+        final Lazy<String> lazy = new Lazy.Value<>(() -> { list.add("1"); return "1"; });
         assertThat(list).isEmpty();
 
         assertThat(lazy.value()).isEqualTo("1");
@@ -23,7 +23,7 @@ public class LazyTest {
     @Test
     public void testCachedLazy() throws Exception {
         final List<String> list = new ArrayList<>();
-        final Lazy<String> lazy = new Lazy.Cached<>(new Lazy.Smart<>(() -> { list.add("1"); return "1"; }));
+        final Lazy<String> lazy = new Lazy.Cached<>(new Lazy.Value<>(() -> { list.add("1"); return "1"; }));
         assertThat(list).isEmpty();
 
         assertThat(lazy.value()).isEqualTo("1");
