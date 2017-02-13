@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <name>java-lazy</name>
-    <description />
+    <description>Very simple approach to achieve lazy initialization on desired instances.</description>
     <url>https://github.com/codejanovic/java-lazy</url>
     <developers>
         <developer>
