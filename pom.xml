@@ -4,7 +4,7 @@
 
     <groupId>io.github.codejanovic</groupId>
     <artifactId>java-lazy</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <packaging>jar</packaging>
 
     <name>java-lazy</name>
@@ -34,7 +34,7 @@
         <connection>scm:git:git://github.com/codejanovic/java-lazy.git</connection>
         <developerConnection>scm:git:git@github.com:codejanovic/java-lazy.git</developerConnection>
         <url>https://github.com/codejanovic/java-lazy.git</url>
-      <tag>0.1.0</tag>
+      <tag>0.2.0</tag>
   </scm>
 
     <properties>
@@ -126,7 +126,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.5.201505241946</version>
+                <version>0.7.9</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
